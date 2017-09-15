@@ -4,6 +4,7 @@ import { SharedService } from './shared.service';
 @Component({
   selector: 'app-entry',
   templateUrl: './entry.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class EntryComponent implements OnInit {
 

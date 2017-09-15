@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class SharedService {
-  shNumber : number;
-   shFirstName: string;
-   shLastName: string;
-   shProg: string;
-   shYear:number;
-  shStudentCollection: Array<object> = [];
+   sharedNumber : number;
+   sharedFirstName: string;
+   sharedLastName: string;
+   sharedProg: string;
+   sharedYear:number;
+  sharedStudentCollection: Array<object> = [];
   studObject: {
     number: number, 
     studfname: string, 
@@ -18,19 +18,19 @@ export class SharedService {
 
   constructor() {}
 
-  addNewStudent(shNumber: number, shFirstName: string, shLastName: string, shProg: string, shYear:number){
+  addNewStudent(sharedNumber: number, sharedFirstName: string, sharedLastName: string, sharedProg: string, sharedYear:number){
     this.studObject = {
-      number: shNumber,
-      studfname: shFirstName,
-      studlname: shLastName,
-      studprog: shProg,
-      studyr: shYear
+      number: sharedNumber,
+      studfname: sharedFirstName,
+      studlname: sharedLastName,
+      studprog: sharedProg,
+      studyr: sharedYear
     };
-    this.shStudentCollection.push(this.studObject);
+    this.sharedStudentCollection.push(this.studObject);
   }
 
   getStudent(): Array <object>{
-    return this.shStudentCollection;
+    return this.sharedStudentCollection;
   }
 
 }

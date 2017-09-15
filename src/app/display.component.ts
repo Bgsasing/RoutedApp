@@ -4,6 +4,7 @@ import { SharedService } from './shared.service';
 @Component({
   selector: 'app-display',
   templateUrl: './display.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class DisplayComponent implements OnInit {
   studColl: Array<object>;
