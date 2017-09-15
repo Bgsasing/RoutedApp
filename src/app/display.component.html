@@ -1,25 +1,15 @@
-<div>
-    {{messages}}
-</div>
-<div *ngIf="printing">
-  <table>
-    <thead>
-      <tr>
-        <th>Student Number</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Program Enrolled</th>
-        <th>Year</th>
-      </tr>
-    </thead>
-  <tbody>
-    <tr *ngFor="let studentRecord of studentCollection">
-      <td>{{ studentRecord.studNumber }}</td>
-      <td>{{ studentRecord.studFirstName }}</td>
-      <td>{{ studentRecord.studLastName }}</td>
-      <td>{{ studentRecord.studProgram }}</td>
-      <td>{{ studentRecord.studYear }}</td>
-    </tr>
-  </tbody>
-  </table>
-</div>
+<table class="table table-striped">
+    <th class = "blue-grey lighten-4">Student Number </th>
+    <th>First Name </th>
+    <th>Last Name </th>
+    <th>Program</th>
+    <th>Year</th>
+<tr *ngFor = "let student of studColl">
+<td>{{student.number}} </td>
+<td>{{student.studfname}}</td>
+<td>{{student.studlname}}</td> 
+<td>{{student.studprog}}</td>
+<td>{{student.studyr}}</td>
+</tr>
+</table>
+   

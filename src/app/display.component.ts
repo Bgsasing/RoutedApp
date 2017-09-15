@@ -1,18 +1,19 @@
-OnInit {
+import { Component, OnInit } from '@angular/core';
+import { SharedService } from './shared.service';
 
-    studNo: number;
-    studFname: string;
-    studLname: string;
-    studProg: string;
-    studYr: number;
-}
+@Component({
+  selector: 'app-display',
+  templateUrl: './display.component.html',
+  styleUrls: ['./display.component.css']
+})
+export class DisplayComponent implements OnInit {
+  studColl: Array<object>;
 
-constructor(private common: ){ }
+  constructor(private dataStore: SharedService) { }
 
-ngOnInit() {
-    this.studNo =
-    this.studFname =
-    this.studLname =
-    this.studProg = 
-    this.studYr
+  ngOnInit() {
+    
+    this.studColl = this.dataStore.getStudent();
+  }
+
 }
